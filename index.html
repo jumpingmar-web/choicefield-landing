@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ChoiceField — 屏幕时间管理，不靠意志力 / screen time without willpower</title>
+<meta name="description" content="ChoiceField 是免费的 iOS 屏幕时间应用：按 App 设每日额度，记录每次绕过，不锁机、不连击。数据存在本机。">
+<style>
+:root{--ink:#101828;--muted:#5b6472;--line:#e6e9ef;--brand:#e8562a;--bg:#fff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+ font:16px/1.65 -apple-system,"Segoe UI","Noto Sans SC","Hiragino Sans",Roboto,sans-serif}
+.wrap{max-width:960px;margin:0 auto;padding:28px 20px 64px}
+header{display:flex;align-items:center;gap:12px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.logo{width:38px;height:38px;border-radius:10px;background:var(--brand);color:#fff;
+ display:grid;place-items:center;font-weight:700}
+h1{font-size:30px;line-height:1.25;margin:26px 0 10px}
+h2{font-size:20px;margin:34px 0 10px}
+p.lead{font-size:17px;color:var(--muted);margin:0 0 22px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0 8px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 20px;border-radius:12px;
+ text-decoration:none;font-weight:650;border:1px solid transparent}
+.btn.p{background:var(--brand);color:#fff}
+.btn.s{background:#fff;color:var(--ink);border-color:var(--line)}
+.small{font-size:13px;color:var(--muted);margin:6px 0 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:20px 0}
+.card{border:1px solid var(--line);border-radius:14px;padding:16px}
+.card b{display:block;margin-bottom:6px}
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:18px 0}
+.shots img{width:100%;border-radius:12px;border:1px solid var(--line)}
+.qr{display:flex;gap:22px;flex-wrap:wrap;align-items:center;border:1px solid var(--line);
+ border-radius:14px;padding:16px;margin:22px 0}
+.qr img{width:132px;height:132px;image-rendering:pixelated}
+footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+.en{border-top:1px solid var(--line);margin-top:40px;padding-top:10px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><div class="logo">C</div><b>ChoiceField</b><span class="small" style="margin-left:auto">iOS · 免费 · 数据在本机</span></header>
+
+<h1>睡前刷手机 90 分钟 → 12 分钟，不靠意志力</h1>
+<p class="lead">锁机、卸载、让别人改密码，我都试过，全部反弹。真正撑住 21 天的是一套「每日额度 + 每次绕过都记账」的机制，而不是限制。</p>
+
+<div class="cta">
+  <a class="btn p" href="https://apps.apple.com/us/app/id6769946195" rel="noopener">App Store 下载（美区）</a>
+  <a class="btn s" href="https://apps.apple.com/cn/app/id6769946195" rel="noopener">App Store 下载（国区）</a>
+</div>
+<p class="small">免费下载，无订阅；屏幕时间数据保存在设备上。</p>
+
+<div class="qr">
+  <div><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUoAAAFKAQAAAABTUiuoAAACe0lEQVR4nO1aQa7cMAh9OJb+MpHmAP8ozg161t4gPsrcwF5WSkQFdpL5rVpNNw1SYGFlxiwQz+AHhhhvSg7vagKuGtxZ8OOCSl1mAETTRsjtj4h9K3rAwEjKGFgFwEa81A8GRmakAiDpVjFj671Vo64EDKviRokBSk8Co8pWnYD03YStrhq/+GOLnKciQA0rpUUAdGeZPS4D6zWG/LleY8BfJeDuqlHXTuPrBE5leokyucFkw4StropOIURSGfjXpcvAvLizwtUni/5QHW8SdMo8dsmX2xpcFagRyNNGNO9fPZjGH4SsedGdZeO4gJlX8DLKIr8Tr1+qLNng4pnQDFpaGPd7q0tBQ1DR0mKZ/d6CBbSKkAnFQ5E5cdt7GY6WJbQg8Mj3EUwtHR6ZcHFOaAet4Uh9mgQ7eddrbM+MngkNodULLIkozYkNweNC83rLDloqGlutG78nwRZgmgmdZdhAK7YuE8Y1UioTcZ4HloJLWrub1M5HQyNcbWu4vSo0svYCa2eH/PLT6y1Tx6VKfNUImttrpHzpouzw+cG9oREM2HpzVexx1LsavZc7ngxe6KAzeDNolU4mzqb7yerbm5fmyeVyW8PtVXHcUi8XVQ8rpYgNQe8TWjku58yTNN0FKE19+qVzUL0lFQzYenPVeD5jEeqDkYW+529rm6JRGi9qqwFbw+1VYwdKIWt9wiI/ZeYJ7aVrb/WG2zsrmPJA7SOgyg5pbkOFGxE5gzeI1tgJhkKmA7v9hfLps7r/CYJ/mHmCTqhNffopK2Yy89QG1sLVtobbq0adp+5uqA+d+YycP7Vt+Fgbbu4s4zNPv0u+3NbgqnBnvS2XO+sncfS0qELINgQAAAAASUVORK5CYII=" alt="国区二维码"><div class="small">扫码 → 国区 App Store</div></div>
+  <div><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUoAAAFKAQAAAABTUiuoAAACgUlEQVR4nO1bTYrdMAz+ZBtmmQdzgDlKcoMeaejNnKO8G8TLQoKKJDvJzOq10MYQaWFiWwsh+bP+HGK8SHN4lRNw1uDKgh8XFKo0YSNAhtkWEtpWcsCgkysjspLOieiNgYEZ4wJg1K2lG1mdFajoAcBZpp9PIv0y5E2urD6OS/o2JwwLGCWuNOb1PwgQnBV/rSzO6rc+VkOZ67VDbLFNygMYl+2EMvFgstGFrM6KGkIIjUvk70OlyJxdWeHqk5UqeozEUQ2rQO0XYX7EBrp/KEBwVvyJskoC5sdGNBWNBDXpEjANajLXa1/YWuUjsoBpFUuBxrwljM8kzmtLjPK+diBruD0rmt8SHzUwc9ZkWdfUjDbIhisr9HBcokQUW70E5YsmXXumGnn40e4IW7GVmnjFeWgAM7zly2UNt2cFM4s9xCi1WFiDd82O+aDsygpXHxeYjSqYNBLUMu650uv5VkfWWqpnqqUmCSus/G7GU+Q5trqwlrBKbMEr6FMvvCIdk71iaMFiP7LemxUnz6QebL8EW/jR1vLlsgZnhdQyrE+sbSwpv9Mka5Peic83SZtdWV1oYI8y5BI8AsPdeR0Zc75c1nB7VnzJt3aT6XW4FzlsI9xeWaErv7W0QpTBympQGmU4troA95f+liRde1hxNLk8gu+pdxzt/QVZ7zhvwPxDmlxFmspFw/jkNXh0Yi2AzGQDg2aKTLLCmojttsT1sgZnxYkKUb0JJVme7FHhRkQewXd4XIb60qlmXtQeFWrvBH3JemNWFjAdnS7NmFvZkJl/fshuJ7LemTVZndCovK/yLo2loJFoXKS/Xx7tKU24WtZwe1byP4Lgx+VlCs6Kl+k3jFKtXJ5ugaYAAAAASUVORK5CYII=" alt="US QR"><div class="small">Scan → US App Store</div></div>
+  <div style="flex:1;min-width:220px">
+    <b>21 天实测</b>
+    <div class="small">睡前使用 90 → 12 分钟 · 每天打开 41 → 19 次 · 每周绕过 23 → 6 次 · 卸载的 App：0 个</div>
+  </div>
+</div>
+
+<h2>为什么不做「锁」</h2>
+<div class="grid">
+  <div class="card"><b>每日额度，不是开关</b>游戏 20 分钟、短视频 20 分钟；消息和地图不设限。额度用完只问一次。</div>
+  <div class="card"><b>每次绕过都记账</b>计数比上限更重要：封锁是二选一，糟糕的一天就是失败；计数是测量，测量更难自欺。</div>
+  <div class="card"><b>不做连击、不做羞耻屏</b>没有连续天数，也就没有「断了就全废」的崩盘。</div>
+</div>
+
+<h2>界面</h2>
+<div class="shots">
+  <img src="https://choicefield.loyalai.top/img/cf-jp-1.jpg" alt="screenshot 1">
+  <img src="https://choicefield.loyalai.top/img/cf-jp-2.jpg" alt="screenshot 2">
+  <img src="https://choicefield.loyalai.top/img/cf-jp-3.jpg" alt="screenshot 3">
+</div>
+
+<div class="en">
+<h2>English</h2>
+<p class="lead">Blocking apps failed me three times (9 days, 5 weeks, 12 days). What held for 21 days: a per-app daily budget plus a counter of every override. No lock, no streak, no guilt screen.</p>
+<div class="cta">
+  <a class="btn p" href="https://apps.apple.com/us/app/id6769946195" rel="noopener">Download on the App Store (US)</a>
+  <a class="btn s" href="https://apps.apple.com/cn/app/id6769946195" rel="noopener">App Store (China)</a>
+</div>
+<p class="small">Free, no subscription, on-device data. Sleep-adjacent use 90 → 12 min/night; opens 41 → 19/day; overrides 23 → 6/week.</p>
+</div>
+
+<footer>ChoiceField · iOS · <a href="https://apps.apple.com/us/app/id6769946195">App Store (US)</a> · <a href="https://apps.apple.com/cn/app/id6769946195">App Store (CN)</a><br>
+本页仅提供下载入口与实测记录，不收集任何个人数据。</footer>
+</div>
+</body>
+</html>
