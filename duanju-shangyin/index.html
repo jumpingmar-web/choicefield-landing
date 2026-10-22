@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>短剧为什么停不下来？没有「停止信号」的连续播放</title>
+<meta name="description" content="短剧、竖屏短视频之所以一集接一集，是因为自动连播、极短单集和悬念切口共同取消了「停止信号」。本文拆解这套机制，并给出三个对抗方法。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://jumpingmar-web.github.io/choicefield-landing/duanju-shangyin/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="短剧为什么停不下来？因为它被设计成没有结尾">
+<meta property="og:description" content="短剧、竖屏短视频之所以一集接一集，是因为自动连播、极短单集和悬念切口共同取消了「停止信号」。本文拆解这套机制，并给出三个对抗方法。">
+<meta property="og:url" content="https://jumpingmar-web.github.io/choicefield-landing/duanju-shangyin/">
+<meta property="og:image" content="https://choicefield.loyalai.top/img/cf-jp-1.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{--ink:#101828;--muted:#5b6472;--line:#e6e9ef;--brand:#e8562a;--bg:#fff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+ font:16px/1.7 -apple-system,"Segoe UI","Noto Sans SC","Hiragino Sans",Roboto,sans-serif}
+.wrap{max-width:760px;margin:0 auto;padding:26px 20px 64px}
+header{display:flex;align-items:center;gap:10px;padding-bottom:16px;border-bottom:1px solid var(--line);font-size:14px}
+.logo{width:32px;height:32px;border-radius:9px;background:var(--brand);color:#fff;display:grid;place-items:center;font-weight:700}
+a{color:var(--brand)}
+h1{font-size:27px;line-height:1.3;margin:24px 0 8px}
+h2{font-size:19px;margin:30px 0 8px}
+p.lead{font-size:17px;color:var(--muted)}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 6px}
+.btn{display:inline-flex;padding:12px 18px;border-radius:11px;text-decoration:none;font-weight:650;border:1px solid transparent}
+.btn.p{background:var(--brand);color:#fff}
+.btn.s{background:#fff;color:var(--ink);border-color:var(--line)}
+.small{font-size:13px;color:var(--muted)}
+.faq{border:1px solid var(--line);border-radius:13px;padding:4px 16px;margin:18px 0}
+.faq details{padding:11px 0;border-bottom:1px solid var(--line)}
+.faq details:last-child{border-bottom:0}
+.faq summary{font-weight:650;cursor:pointer}
+.qr{display:flex;gap:16px;align-items:center;border:1px solid var(--line);border-radius:13px;padding:14px;margin:20px 0}
+.qr img{width:104px;height:104px;image-rendering:pixelated}
+nav.more{margin:26px 0 0;padding-top:14px;border-top:1px solid var(--line);font-size:14px}
+footer{margin-top:34px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+</style>
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "短剧为什么停不下来？因为它被设计成没有结尾",
+    "description": "短剧、竖屏短视频之所以一集接一集，是因为自动连播、极短单集和悬念切口共同取消了「停止信号」。本文拆解这套机制，并给出三个对抗方法。",
+    "inLanguage": "zh-Hans",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://jumpingmar-web.github.io/choicefield-landing/duanju-shangyin/"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "ChoiceField"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ChoiceField"
+    },
+    "about": [
+      "屏幕时间",
+      "手机使用习惯",
+      "睡眠卫生"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "关掉自动连播有用吗？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "对「无意识连看」最有效：它把连续播放拆成一次次主动选择，摩擦立刻上升。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "卸载短剧 App 是不是更彻底？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "通常不持久。卸载后容易换一个 App 或用小程序，问题会转移而不是消失。先改机制，再谈卸载。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "看短剧本身是坏事吗？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "不是。问题在于「不受控的时长」和「挤占睡眠」，而不是内容品类。"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "ChoiceField",
+        "item": "https://jumpingmar-web.github.io/choicefield-landing/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "短剧为什么停不下来？因为它被设计成没有结尾",
+        "item": "https://jumpingmar-web.github.io/choicefield-landing/duanju-shangyin/"
+      }
+    ]
+  }
+]
+</script>
+</head>
+<body>
+<div class="wrap">
+<header><div class="logo">C</div><b><a href="https://jumpingmar-web.github.io/choicefield-landing/" style="color:inherit;text-decoration:none">ChoiceField</a></b>
+<span class="small" style="margin-left:auto">iOS · 免费 · 数据在本机</span></header>
+
+<h1>短剧为什么停不下来？因为它被设计成没有结尾</h1>
+<p class="lead">你不是「一集接一集看」，你是被一集接一集地递到下一集——中间没有需要你做决定的时刻。</p>
+<h2>三个取消「停止点」的设计</h2>
+<p>自动连播：片尾没有真正的片尾，0.5 秒后下一集开始，你不需要任何动作。</p>
+<p>极短单集：单集 60–90 秒，沉没成本低到「再看一集」永远显得合理。</p>
+<p>悬念切口：每集结束在冲突最高点，而不是解决之后——你的大脑带着未闭合的张力进入下一集。</p>
+<h2>为什么「看完这集就睡」从来不算数</h2>
+<p>因为你的承诺发生在「这一集」的语境里，而下一集开始后，承诺的时间坐标就消失了。</p>
+<p>同理，「再看 10 分钟」也不成立：没有钟表，只有还剩几集。</p>
+<h2>方法一：把「集」换成「时间」</h2>
+<p>不要说「再看两集」，说「看到 23:10」。时间边界可以跨内容成立，集数边界不能。</p>
+<p>把手机时钟放到能看见的位置，或用倒计时，让边界可见。</p>
+<h2>方法二：关掉自动连播</h2>
+<p>这一个开关的收益被严重低估：它把「连续」变回「一次一次」，每一次都需要一个动作。</p>
+<p>代价是每集结束你要点一下——这正是你要的摩擦。</p>
+<h2>方法三：让「开始」也有成本</h2>
+<p>把短剧 App 移出首屏、退出登录、关掉推送。不是封死，而是让启动多花 5 秒。</p>
+<p>5 秒足够让「自动行为」变回「有意识的选择」，而多数冲动撑不过 5 秒。</p>
+
+<div class="cta">
+  <a class="btn p" href="https://apps.apple.com/cn/app/id6769946195" rel="noopener">App Store 下载（国区）</a>
+  <a class="btn s" href="https://apps.apple.com/us/app/id6769946195" rel="noopener">App Store 下载（美区）</a>
+</div>
+<p class="small">免费下载，无订阅；屏幕时间数据保存在设备上。</p>
+
+<div class="qr">
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQgAAAEIAQAAAACLjVdSAAABm0lEQVR4nO1a0Y7DMAjDUf//l30Ck6YnnbQ3io6100ozHqhHjGED7cOxPjnY1+P/4mHcCUK3aHl7VrtEuko8rv3sMAOBwATEWZ2Hh+XT09FwLJQcudol0lXugUyLG5GX4ujiQTPAPEnejeP1/cIwYfQEiTyJ7VMZx+pXX+z3uT/uEukq8cAfegyPetsn0lXlAX85cZhflTKU1SzSGg/GkzsCcEbdNwlUp0ir9gvcEomKV1V5VX3H1ReEJpX6sOTVgEILE+sLwzKpMcGTvczY/oUhSj1JwJTqqroT+xcGe+DubzevujVSf2A3LRB3ODrOquP4dO1GNvIDeKYH20Va40EHZPe1TIYN8eHvnSKt0qcm/cW4+hnoBKN0irRIn1oUFu2Z1CGPvr9RpEX6g1IaxvteUIQ1T3/wOUZG7hJRqm+ceXrd4vBhkKRptC+h4ufV2+vM16HMCCa5E2Rgftgtz805VdVlqv64jokzVGbI04n9/jomT9+CLVQxeL5uiYZkac5EZs4//EipvrVI/po7TX/g+3+Hlt/LauLxA5nn0c/netEkAAAAAElFTkSuQmCC" alt="国区二维码">
+  <div style="flex:1;min-width:180px">
+    <b>扫码直接下载</b>
+    <div class="small">左图为国区 App Store；文末两个按钮分别为国区与美区。</div>
+  </div>
+</div>
+
+<h2>常见问题</h2>
+<div class="faq">
+  <details><summary>关掉自动连播有用吗？</summary><p>对「无意识连看」最有效：它把连续播放拆成一次次主动选择，摩擦立刻上升。</p></details>
+  <details><summary>卸载短剧 App 是不是更彻底？</summary><p>通常不持久。卸载后容易换一个 App 或用小程序，问题会转移而不是消失。先改机制，再谈卸载。</p></details>
+  <details><summary>看短剧本身是坏事吗？</summary><p>不是。问题在于「不受控的时长」和「挤占睡眠」，而不是内容品类。</p></details>
+</div>
+
+<nav class="more">
+<b>更多指南：</b> <a href="https://jumpingmar-web.github.io/choicefield-landing/shuijian-shuashouji/">睡前刷手机怎么办</a> · <a href="https://jumpingmar-web.github.io/choicefield-landing/shouji-chengyin/">手机成瘾自测</a> · <a href="https://jumpingmar-web.github.io/choicefield-landing/">首页</a>
+</nav>
+
+<footer>本文为个人经验与方法说明，不构成医疗建议。如出现持续失眠、焦虑或抑郁，请咨询专业人士。<br>
+ChoiceField · <a href="https://apps.apple.com/cn/app/id6769946195">国区 App Store</a> · <a href="https://apps.apple.com/us/app/id6769946195">美区 App Store</a></footer>
+</div>
+</body>
+</html>
